@@ -5,6 +5,11 @@ All  changes to this project will be documented in this file.
 ## [Unreleased]
 <br/><br/>
 
+## [v1.7.0] - 2017-12-15
+### Added
+- Included "subtraction", "multiplication" and "division" functionality.
+<br/><br/>
+
 ## [v1.6.0] - 2017-12-15
 ### Changed
 - Refactored AJAX code.
