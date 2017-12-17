@@ -7,6 +7,15 @@ $(document).ready(function () {
     //}
 });
 
+function updateProgress(evt) {
+    if (evt.lengthComputable) {
+        var eventComplete = evt.loaded / evt.total;
+        // display percentComplete
+    } else {
+        // Need total size to compute progress
+    }
+}
+
 function addNumbers() {
     var x = document.getElementById('x').value;
     var y = document.getElementById('y').value;
@@ -20,6 +29,8 @@ function addNumbers() {
             result.innerHTML = jsonObject.result;
         }
     }
+
+    xmlhttp.addEventListener("progress", updateProgress, false); // Progress Event Listener
 
     xmlhttp.open("GET", "/addition?x=" + x + "&y=" + y, true);
     xmlhttp.send();

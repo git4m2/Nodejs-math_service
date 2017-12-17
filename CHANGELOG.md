@@ -5,6 +5,11 @@ All  changes to this project will be documented in this file.
 ## [Unreleased]
 <br/><br/>
 
+## [v1.3.0] - 2017-12-13
+### Added
+- Added Progress Event Listener.
+<br/><br/>
+
 ## [v1.2.0] - 2017-12-12
 ### Changed
 - Asynchronous call to AJAX web service.
