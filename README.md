@@ -23,8 +23,17 @@ Server running at http://localhost:8080/
 ```
 Open browser to the URL below 
 ```
-<http://localhost:8080/addition?x=5&y=10>
+<http://localhost:8080/Math.html>
 ```
-Browser responds with... 
-{"result": 15}
+Browser responds with "Enter X:" and "Enter Y:" fields on a data form...
+Enter a value for both fields and click the Add button.
+```
+
+#### Step 4
+```
+Browser responds with "Result:<value>"
+
+Node command prompt displays...
+You have made <counter> calls!
+Handled addition request for x=<value> : y=<value>
 ```
