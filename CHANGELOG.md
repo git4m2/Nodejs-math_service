@@ -5,6 +5,11 @@ All  changes to this project will be documented in this file.
 ## [Unreleased]
 <br/><br/>
 
+## [v1.8.1] - 2017-12-16
+### BugFix
+- Resolve divide-by-zero error.
+<br/><br/>
+
 ## [v1.8.0] - 2017-12-16
 ### Changed
 - Use jQuery Promises.

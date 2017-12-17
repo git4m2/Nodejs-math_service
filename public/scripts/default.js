@@ -58,7 +58,7 @@ function serverMultiplication(data) {
 
 function divideNumbers() {
     var data = getFormData();
-    serverDivision(data).done(displayResult);
+    serverDivision(data).done(displayResult).fail(displayError);
 }
 
 function serverDivision(data) {
@@ -69,4 +69,10 @@ function serverDivision(data) {
         dataType: 'json',
         cache: false
     });
+}
+
+function displayError(serverData, error) {
+    var value = 'No result';
+    if ('result' in serverData) value = serverData.result;
+    $('#result').html(value + ' - ' + error);
 }
