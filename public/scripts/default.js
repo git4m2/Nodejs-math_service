@@ -16,6 +16,14 @@ function updateProgress(evt) {
     }
 }
 
+function transferFailed(evt) {
+    alert("An error ocurrred");
+}
+
+function canceled(evt) {
+    alert("Canceled by the user");
+}
+
 function addNumbers() {
     var x = document.getElementById('x').value;
     var y = document.getElementById('y').value;
@@ -31,6 +39,8 @@ function addNumbers() {
     }
 
     xmlhttp.addEventListener("progress", updateProgress, false); // Progress Event Listener
+    xmlhttp.addEventListener("error", transferFailed, false); // Error Event Listener
+    xmlhttp.addEventListener("abort", canceled, false); // Abort Event Listener
 
     xmlhttp.open("GET", "/addition?x=" + x + "&y=" + y, true);
     xmlhttp.send();

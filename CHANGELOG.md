@@ -5,6 +5,12 @@ All  changes to this project will be documented in this file.
 ## [Unreleased]
 <br/><br/>
 
+## [v1.4.0] - 2017-12-14
+### Added
+- Added Error Event Listener.
+- Added Abort Event Listener.
+<br/><br/>
+
 ## [v1.3.0] - 2017-12-13
 ### Added
 - Added Progress Event Listener.
