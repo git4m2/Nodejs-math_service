@@ -5,6 +5,11 @@ All  changes to this project will be documented in this file.
 ## [Unreleased]
 <br/><br/>
 
+## [v1.8.0] - 2017-12-16
+### Changed
+- Use jQuery Promises.
+<br/><br/>
+
 ## [v1.7.0] - 2017-12-15
 ### Added
 - Included "subtraction", "multiplication" and "division" functionality.

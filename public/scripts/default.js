@@ -10,52 +10,63 @@ $(document).ready(function () {
     //}
 });
 
-function addNumbers() {
+function getFormData() {
     var x = $('#x').val();
     var y = $('#y').val();
     var data = { "x": x, "y": y };
-    $.getJSON('/addition', data, function (data) {
-        $('#result').html(data.result);
-    });
+    return data;
+}
+
+function displayResult(serverData) {
+    $('#result').html(serverData.result);
+}
+
+function addNumbers() {
+    var data = getFormData();
+    serverAddition(data).done(displayResult);
+}
+
+function serverAddition(data) {
+    // Returns a promise object
+    return $.getJSON('/addition', data);
 }
 
 function subtractNumbers() {
-    var x = $('#x').val();
-    var y = $('#y').val();
-    var data = { "x": x, "y": y };
-    $.post('/subtraction', data, function (data) {
-        $('#result').html(data.result);
-    }, 'json');
+    var data = getFormData();
+    serverSubtraction(data).done(displayResult);
+}
+
+function serverSubtraction(data) {
+    // Returns a promise object
+    return $.post('/subtraction', data, 'json');
 }
 
 function multiplyNumbers() {
-    var x = $('#x').val();
-    var y = $('#y').val();
-    var data = { "x": x, "y": y };
-    $.ajax({
+    var data = getFormData();
+    serverMultiplication(data).done(displayResult);
+}
+
+function serverMultiplication(data) {
+    return $.ajax({
         url: '/multiply',
         data: data,
         type: 'PUT',
         dataType: 'json',
-        cache: false,
-        success: function (data) {
-            $('#result').html(data.result);
-        }
+        cache: false
     });
 }
 
 function divideNumbers() {
-    var x = $('#x').val();
-    var y = $('#y').val();
-    var data = { "x": x, "y": y };
-    $.ajax({
+    var data = getFormData();
+    serverDivision(data).done(displayResult);
+}
+
+function serverDivision(data) {
+    return $.ajax({
         url: '/divide',
         data: data,
         type: 'DELETE',
         dataType: 'json',
-        cache: false,
-        success: function (data) {
-            $('#result').html(data.result);
-        }
+        cache: false
     });
 }
