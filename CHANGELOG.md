@@ -5,6 +5,11 @@ All  changes to this project will be documented in this file.
 ## [Unreleased]
 <br/><br/>
 
+## [v1.6.0] - 2017-12-15
+### Changed
+- Refactored AJAX code.
+<br/><br/>
+
 ## [v1.5.0] - 2017-12-14
 ### Changed
 - Setup AJAX method as a wrapper for the XMLHttpRequest object.
