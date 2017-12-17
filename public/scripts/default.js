@@ -13,9 +13,14 @@ function addNumbers() {
     var result = document.getElementById('result');
     var xmlhttp = new XMLHttpRequest();
 
-    // Synchronous Call
-    xmlhttp.open("GET", "/addition?x=" + x + "&y=" + y, false);
+    // Asynchronous Call
+    xmlhttp.onreadystatechange = function () {
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+            var jsonObject = JSON.parse(xmlhttp.response);
+            result.innerHTML = jsonObject.result;
+        }
+    }
+
+    xmlhttp.open("GET", "/addition?x=" + x + "&y=" + y, true);
     xmlhttp.send();
-    var jsonObject = JSON.parse(xmlhttp.response);
-    result.innerHTML = jsonObject.result;
 }

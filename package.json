@@ -1,6 +1,6 @@
 {
   "name": "math_service_npm4m2",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "A simple math web service",
   "main": "app.js",
   "dependencies": {
