@@ -1,0 +1,27 @@
+{
+  "name": "math_service_npm4m2",
+  "version": "1.0.0",
+  "description": "A simple math web service",
+  "main": "app.js",
+  "dependencies": {
+    "formidable": "1.x",
+    "express": "3.0.0",
+    "math_example": "0.x"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/git4m2/Nodejs-math_service.git"
+  },
+  "author": "Glenn Johnson",
+  "license": "MIT",
+  "private": true,
+  "bugs": {
+    "url": "https://github.com/git4m2/Nodejs-math_service/issues"
+  },
+  "homepage": "https://github.com/git4m2/Nodejs-math_service"
+}
